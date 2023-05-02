@@ -6,13 +6,13 @@
 # Purpose:                      learning
 
 # Declaration of variables
-baseball="I am working perfectly!"
+yo="I am working perfectly!"
 
 # Declaration of functions
 
 
 # Main
 echo "Hello World"
-echo $baseball
+echo $yo
 
 # End
