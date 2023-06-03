@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# Script Name: Ops Challenge:   Ops Challenge: Conditionals in Menu Systems
+# Author:                       Wayne Brandon
+# Date of latest revision:      06/02/2023
+# Purpose:                      Educational practice with conditional statements
+
+# Declaration of variables
+# Hello-World (prints “Hello world!” to screen), Ping-Self (pings this computer's loopback address), IP-Info (print the network adapter information for this computer), Exit
+
+# Declaration of functions
+
+# Main
+echo ”Hello, please select from the menu”
+
+MENU=“Hello-World Ping-Self IP-Info Exit”
+
+select option in $MENU; do
+    if [ "$option" = "Hello-World" ]; then
+       echo "Hello World!"
+    elif [ "$option" = "Ping-Self" ]; then
+        ping -c 1 127.0.0.1
+    elif [ "$option" = "IP-Info" ]; then
+        ifconfig -l
+    elif [ "$option" = "Exit" ]; then
+        echo "Goodbye!"
+        break
+    else
+        echo "Invalid Selection"
+    fi 
+done 
+
+# End
