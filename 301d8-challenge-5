@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Script Name:                  Script Name Ops Challenge: Class 05
+# Author:                       Wayne Brandon
+# Date of latest revision:      06/05/2023
+# Purpose:                      Purpose write a log clearing bash script
+
+# Declaration of variables
+
+# Declaration of functions
+
+
+# Main
+# prints the file size of syslog to the screen before compression
+echo "File size of syslog before compression: $(stat --printf="%s"/var/log/syslog)"
+
+# prints the file size of wtmp to the screen before compression
+echo "File size of wtmp before compression: $(stat --printf="%s"/var/log/wtmp)"
+
+# compresses the contents of syslogs & wtmp logs into an archive name log.tar.gz inside the /backup directory
+tar -czvf/backup/logs.tar.gz /var/logs/syslog /var/log/wtmp
+
+echo "Backup complete"
+
+
+# End
